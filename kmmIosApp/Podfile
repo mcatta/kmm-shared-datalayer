@@ -1,0 +1,5 @@
+target 'kmmIosApp' do
+  use_frameworks!
+  platform :ios, '14.1'
+  pod 'kmmShared', :path => '../kmmShared'
+end
