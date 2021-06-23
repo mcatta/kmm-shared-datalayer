@@ -4,8 +4,9 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import dev.marcocattaneo.kmmapp.data.ApiDatasource
+import dev.marcocattaneo.kmmapp.data.GithubApiSource
 import dev.marcocattaneo.kmmapp.data.client.SharedHttpClient
+import dev.marcocattaneo.kmmapp.data.mappers.RepositoryMapper
 import dev.marcocattaneo.kmmapp.domain.GithubRepository
 import javax.inject.Singleton
 
@@ -15,6 +16,6 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideGithubRepository(): GithubRepository = ApiDatasource(SharedHttpClient())
+    fun provideGithubRepository(): GithubRepository = GithubApiSource(SharedHttpClient(), RepositoryMapper())
 
 }

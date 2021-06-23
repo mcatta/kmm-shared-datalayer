@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.marcocattaneo.kmmapp.data.models.Repository
 import dev.marcocattaneo.kmmapp.domain.GithubRepository
-import dev.marcocattaneo.kmmapp.domain.models.Repository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
