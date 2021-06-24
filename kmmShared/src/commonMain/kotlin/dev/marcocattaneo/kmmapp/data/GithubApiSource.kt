@@ -11,6 +11,7 @@ class GithubApiSource(
     private val repositoryMapper: RepositoryMapper
 ) : GithubRepository {
 
+    @Throws(Throwable::class)
     override suspend fun getRepositoriesByName(name: String): List<Repository> =
         httpClient.get<List<RepositoryApiModel>>("https://api.github.com/users/$name/repos")
             .map { repositoryMapper.parseFromTo(it) }
