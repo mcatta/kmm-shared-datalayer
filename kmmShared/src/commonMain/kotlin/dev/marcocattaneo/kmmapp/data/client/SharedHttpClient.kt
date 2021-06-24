@@ -12,6 +12,7 @@ class SharedHttpClient {
         install(JsonFeature) {
             serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
                 ignoreUnknownKeys = true
+                isLenient = true
             })
         }
     }

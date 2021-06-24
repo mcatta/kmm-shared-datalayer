@@ -40,7 +40,6 @@
 				69A7B78529968883CC2C687E /* Pods-kmmIosApp.debug.xcconfig */,
 				7A28B30BBD70FB80EC87A188 /* Pods-kmmIosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -303,7 +302,9 @@
 			baseConfigurationReference = 69A7B78529968883CC2C687E /* Pods-kmmIosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5Q64AARU9S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = kmmIosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +313,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.kmmIosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,7 +324,9 @@
 			baseConfigurationReference = 7A28B30BBD70FB80EC87A188 /* Pods-kmmIosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5Q64AARU9S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = kmmIosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,6 +335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.kmmIosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
