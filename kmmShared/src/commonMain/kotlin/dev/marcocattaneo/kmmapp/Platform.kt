@@ -7,5 +7,5 @@ expect class Platform() {
 }
 
 expect class ClientEngine() {
-    val clientEngine: HttpClientEngineFactory<HttpClientEngineConfig>
+    val clientEngine: HttpClientEngine
 }

@@ -10,5 +10,5 @@ actual class Platform actual constructor() {
 
 
 actual class ClientEngine {
-    actual val clientEngine: HttpClientEngineFactory<HttpClientEngineConfig> = Ios
+    actual val clientEngine: HttpClientEngine = Ios.create()
 }

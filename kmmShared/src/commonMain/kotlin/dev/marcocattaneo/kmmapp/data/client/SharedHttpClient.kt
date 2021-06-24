@@ -4,6 +4,7 @@ import dev.marcocattaneo.kmmapp.ClientEngine
 import io.ktor.client.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
+import io.ktor.client.features.logging.*
 import io.ktor.client.request.*
 
 class SharedHttpClient {
@@ -14,6 +15,10 @@ class SharedHttpClient {
                 ignoreUnknownKeys = true
                 isLenient = true
             })
+        }
+        install(Logging) {
+            logger = Logger.DEFAULT
+            level = LogLevel.ALL
         }
     }
 

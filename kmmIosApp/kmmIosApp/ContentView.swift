@@ -1,6 +1,5 @@
 import SwiftUI
 import kmmShared
-import Alamofire
 
 struct ContentView: View {
     let repository = GithubApiSource(
