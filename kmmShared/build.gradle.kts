@@ -9,10 +9,12 @@ plugins {
 
 version = "1.0"
 
-val ktorVersion = "1.5.0"
+val ktorVersion = "1.6.0"
 
 kotlin {
-    android()
+    android {
+        publishLibraryVariants("release")
+    }
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
         if (System.getenv("SDK_NAME")?.startsWith("iphoneos") == true)

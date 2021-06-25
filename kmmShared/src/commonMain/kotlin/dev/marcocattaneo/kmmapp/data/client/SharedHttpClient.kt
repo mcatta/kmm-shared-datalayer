@@ -14,6 +14,7 @@ class SharedHttpClient {
             serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
                 ignoreUnknownKeys = true
                 isLenient = true
+                useAlternativeNames = false
             })
         }
         install(Logging) {
