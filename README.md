@@ -1,4 +1,5 @@
 # KMM shared datalayer with Kotlin Multiplatform
+[![CI](https://github.com/mcatta/kmm-shared-datalayer/actions/workflows/blank.yml/badge.svg)](https://github.com/mcatta/kmm-shared-datalayer/actions/workflows/blank.yml)
 
 This is a sample application that uses a shared data layer written in __kotlin multiplatform__.
 
