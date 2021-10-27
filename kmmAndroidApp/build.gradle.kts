@@ -9,22 +9,22 @@ val hiltVersion = "2.37"
 
 dependencies {
     implementation(project(":kmmShared"))
-    implementation("com.google.android.material:material:1.3.0")
-    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-    implementation("androidx.fragment:fragment-ktx:1.3.5")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.fragment:fragment-ktx:1.3.6")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.1")
     // Hilt
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 30
     defaultConfig {
         applicationId = "dev.marcocattaneo.kmmapp.android"
-        minSdkVersion(16)
-        targetSdkVersion(30)
+        minSdk = 16
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
     }
@@ -35,11 +35,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 }

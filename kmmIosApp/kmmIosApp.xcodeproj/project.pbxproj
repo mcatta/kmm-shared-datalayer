@@ -9,17 +9,34 @@
 /* Begin PBXBuildFile section */
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		F896338E569FD9FEB71C8AAA /* Pods_kmmIosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE09E4361B82DA5E64FC1CB /* Pods_kmmIosApp.framework */; };
+		F0FAFD89271EB26C0002E549 /* kmmShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FAFD7E271EA3060002E549 /* kmmShared.framework */; };
+		F0FAFD8A271EB26C0002E549 /* kmmShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0FAFD7E271EA3060002E549 /* kmmShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F0FAFD8B271EB26D0002E549 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F0FAFD8A271EB26C0002E549 /* kmmShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		2DE09E4361B82DA5E64FC1CB /* Pods_kmmIosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kmmIosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A7B78529968883CC2C687E /* Pods-kmmIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kmmIosApp.debug.xcconfig"; path = "Target Support Files/Pods-kmmIosApp/Pods-kmmIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* kmmIosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kmmIosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A28B30BBD70FB80EC87A188 /* Pods-kmmIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kmmIosApp.release.xcconfig"; path = "Target Support Files/Pods-kmmIosApp/Pods-kmmIosApp.release.xcconfig"; sourceTree = "<group>"; };
+		F0FAFD7E271EA3060002E549 /* kmmShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = kmmShared.framework; path = ../kmmShared/build/cocoapods/framework/kmmShared.framework; sourceTree = "<group>"; };
+		F0FAFD82271EA35F0002E549 /* kmmShared.klib */ = {isa = PBXFileReference; lastKnownFileType = file; name = kmmShared.klib; path = ../kmmShared/build/classes/kotlin/ios/main/klib/kmmShared.klib; sourceTree = "<group>"; };
+		F0FAFD84271EA3750002E549 /* kmmShared */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = kmmShared; path = ../kmmShared/build/cocoapods/framework/kmmShared.framework/kmmShared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F896338E569FD9FEB71C8AAA /* Pods_kmmIosApp.framework in Frameworks */,
+				F0FAFD89271EB26C0002E549 /* kmmShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +91,9 @@
 		83A67E8060501F33D3A3D694 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2DE09E4361B82DA5E64FC1CB /* Pods_kmmIosApp.framework */,
+				F0FAFD84271EA3750002E549 /* kmmShared */,
+				F0FAFD82271EA35F0002E549 /* kmmShared.klib */,
+				F0FAFD7E271EA3060002E549 /* kmmShared.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +109,7 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				D248BC3D0DA598532C4C6044 /* Frameworks */,
+				F0FAFD8B271EB26D0002E549 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

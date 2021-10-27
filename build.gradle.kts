@@ -1,17 +1,18 @@
 buildscript {
 
-    val kotlinVersion = "1.5.10"
+    val kotlinVersion = "1.5.31"
 
     repositories {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("com.android.tools.build:gradle:4.2.1")
+        classpath("com.android.tools.build:gradle:7.0.3")
         classpath(kotlin("serialization", version = kotlinVersion))
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.28-alpha")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.38.1")
     }
 }
 

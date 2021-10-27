@@ -3,6 +3,11 @@
 
 This is a sample application that uses a shared data layer written in __kotlin multiplatform__.
 
+#### How build iOS Framework
+```
+./gradlew iosMainKlibrary
+```
+
 #### For the data/domain layer part I'm using:
 * Ktor for the HttpClient layer (with a ClientEngine delegated to the single native module)
 * Kotlin-serialization for the serialization (this avoids the use of a specific platform library like Gson or Moshi for Android)

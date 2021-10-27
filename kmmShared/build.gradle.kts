@@ -5,6 +5,7 @@ plugins {
     kotlin("native.cocoapods")
     kotlin("plugin.serialization")
     id("com.android.library")
+    id("dev.icerock.moko.kswift") version "0.3.0"
 }
 
 version = "1.0"
@@ -14,6 +15,10 @@ val ktorVersion = "1.6.0"
 kotlin {
     android {
         publishLibraryVariants("release")
+    }
+
+    kswift {
+        install(dev.icerock.moko.kswift.plugin.feature.SealedToSwiftEnumFeature)
     }
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
@@ -28,7 +33,9 @@ kotlin {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
         ios.deploymentTarget = "14.1"
-        frameworkName = "kmmShared"
+        framework {
+            baseName = "kmmShared"
+        }
         podfile = project.file("../kmmIosApp/Podfile")
     }
     
@@ -62,15 +69,17 @@ kotlin {
                 implementation("io.ktor:ktor-client-ios:$ktorVersion")
             }
         }
-        val iosTest by getting
+        val iosTest by getting {
+
+        }
     }
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 30
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(16)
-        targetSdkVersion(30)
+        minSdk = 16
+        targetSdk = 30
     }
 }
