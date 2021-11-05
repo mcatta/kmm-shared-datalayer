@@ -7,6 +7,10 @@ This is a sample application that uses a shared data layer written in __kotlin m
 ```
 ./gradlew iosMainKlibrary
 ```
+the command below generate the swift codebase by using **dev.icerock.moko.kswift.plugin**
+```
+./gradlew kSwiftpodPodspec
+```
 
 #### For the data/domain layer part I'm using:
 * Ktor for the HttpClient layer (with a ClientEngine delegated to the single native module)
